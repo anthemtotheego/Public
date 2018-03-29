@@ -1,7 +1,7 @@
 ﻿Function Get-Test
 
 {
-ipconfig > C:\Users\test.txt
+ipconfig > C:\Users\sjones\desktop\test.txt
 }
 
 Get-Test
